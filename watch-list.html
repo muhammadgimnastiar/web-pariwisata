@@ -78,13 +78,15 @@
                     </form>
 
                     <table class="movie-table">
+                        <thead>
                         <tr>
-                            <th data-column="title" data-order="desc">Movie Title</th>
+                            <th data-column="title" data-order="desc" class="rating-filter">Movie Title</th>
                             <th data-column="rating" data-order="desc" class="rating-filter">Movie Rating &triangledown;</th>
-                            <th>Action</th>
+                            <th data-column="action">Action</th>
                         </tr>
-
-                        <tr>
+                    </thead>
+                    <tbody id="movie-table">
+                        <!-- <tr>
                             <td>Toy story</td>
                             <td>8.2</td>
                             <td><input type="button" value="Delete" class="button btn-delete"></td>
@@ -93,8 +95,8 @@
                             <td>Jelangkung</td>
                             <td>8.2</td>
                             <td><input type="button" value="Delete" class="button btn-delete"></td>
-                        </tr>
-
+                        </tr> -->
+                    </tbody>
                     </table>
                 </div>
             </div>
