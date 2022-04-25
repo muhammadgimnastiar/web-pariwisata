@@ -1,14 +1,41 @@
 $(document).ready(function () {
 
+  var tableArray = JSON.parse(localStorage.getItem('movies'))
+
+  function saveDataToLocal(data){
+    localStorage.setItem('movies', JSON.stringify(data))
+  }
+
+
+
+  function buildTable(data) {
+    var table = document.getElementById("movie-table")
+    table.innerHTML = ''
+    for (var i = 0; i < data.length; i++) {
+      var row = "<tr><td data-column='title' data - order='desc' class='cell-title'>" + data[i].title + "</td ><td data-column='rating' data-order='desc'>" + data[i].rating + "<td><input type='button' value='Delete' class='button btn-delete'></td>"                
+      table.innerHTML += row
+    }
+    
+
+  }
+  buildTable(tableArray)
+
+
   // handle add movie
   $("#add").click(function () {
-    var movieName = $('#movie-name-input')
+    var movieTitle = $('#movie-name-input')
     var movieRating = $('#movie-rating-input')
-    if (movieName.val() != "") {
+    if (movieTitle.val() != "") {
       if (movieRating.val() != "") {
-        $(".movie-table").append("<tr><td>" + movieName.val() + "</td><td>" + movieRating.val() + "</td><td><input type='button' value='Delete' class='button btn-delete'></td></tr>")
-        movieName.val("")
+        var arrayData = {}
+        arrayData.title = movieTitle.val()
+        arrayData.rating = movieRating.val()
+        tableArray.push(arrayData)
+
+        movieTitle.val("")
         movieRating.val("")
+        buildTable(tableArray)
+        saveDataToLocal(tableArray)
       } else {
         window.alert("Movie rating harus diisi")
       }
@@ -19,34 +46,21 @@ $(document).ready(function () {
 
   })
 
-  // Filter berdasarkan rating
-  // $(".rating-filter").click(function () {
-  //   var tuker = 'true'
-  //   var rows = $(".movie-table tr")
-  //   window.prompt("bb" + rows[1])
-  //   rows.each(function(){
-  //     $(this).each(function(){
-  //       console.log($(this).)
-  //     })
-  //   })
-  //   while (tuker) {
 
-  //     tuker = 'false'
-  //     for (var i = 1; i < rows.length; i++) {
-  //       x = rows[i][1]
-  //     }
-  //   }
-  // })
-  $('th').click(function(){
-    
+  $('th').click(function () {
+
     var column = $(this).data('column')
     var order = $($(this)).data('order')
-    window.prompt("th clicked " + column + " "+  order)
 
-    if(order == 'desc'){
-      $(this).data('order', 'asc')
-    }else{
-      $(this).data('order', 'desc')
+    if(column != "action"){
+      if (order == 'desc') {
+        $(this).data('order', 'asc')
+        tableArray.sort((a,b) => a[column] > b[column] ? 1 : -1)
+      } else {
+        $(this).data('order', 'desc')
+        tableArray.sort((a,b) => a[column] < b[column] ? 1 : -1)
+      }
+      buildTable(tableArray)
     }
   })
 
@@ -85,8 +99,24 @@ $(document).ready(function () {
   // handle delete row
   $("body").on('click', '.btn-delete', function () {
     var cell = $(this).closest("tr")
-    cell.remove()
+    cell.css({'background-color':'red'})
+    var title = cell.find('td.cell-title').html()
+
+    console.log(title)
+    for(var i = 0; i < tableArray.length; i++){
+      if(title == tableArray[i].title){
+        tableArray.splice(i,1)
+        break
+      }
+    }
+    buildTable(tableArray)
+    saveDataToLocal(tableArray)
+
+    
+    //cell.remove()
   })
+
+  
 
 })
 
