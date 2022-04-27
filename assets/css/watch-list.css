@@ -1,0 +1,79 @@
+/* .content{
+    align-items: center ;
+    margin: auto;
+    padding: auto;
+} */
+
+
+.form-add-movie{
+    display: inline;
+    margin-right: auto;
+    
+
+}
+.field {
+    padding: .3rem;
+
+}
+
+.button {
+    padding: .3rem;
+    margin: auto;
+}
+
+.table-wrapper{
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+    flex-direction: column;
+}
+
+table {
+    margin-inline: 0;
+    text-align: left;
+    min-width: max-content;
+    border: .2px solid rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding-block: auto;
+    padding-inline: 2rem;
+    align-content: center;
+}
+
+th {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.03);
+    font-size: 22px;
+}
+
+td {
+    border-bottom: .6px solid rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+}
+
+
+.rating-filter {
+    cursor: pointer;
+}
+.align-right{
+    margin-block: 10px;
+    
+}
+
+@media screen and (min-width: 800px)  {
+    table{
+        min-width: 800px;
+        margin: 0;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background:rgba(0, 0, 0, 0.1);
+}

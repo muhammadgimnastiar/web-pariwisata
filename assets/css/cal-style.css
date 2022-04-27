@@ -1,0 +1,48 @@
+.center{
+    align-content: center;
+    display: flex;
+    margin: auto;
+}
+
+
+.calculator{
+    max-width: 400px;
+}
+
+.display{
+    height: 130px;
+    width: auto;
+    max-width: 400px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: -32px;
+    overflow-x: scroll;
+    background-color: whitesmoke;
+    color: black;
+}
+tr{
+    
+}
+
+td{
+    min-width: 30px;
+    padding: auto;
+    align-content: center;
+
+}
+button{
+    padding-block: 30px;
+    min-width: 90px;
+    border-radius: 0px;
+    background-color:whitesmoke;
+    border: none;
+    font-size: 24px;
+    transition: all 200ms ease;
+}
+button:hover {
+    transform: scale(1.05);
+    background-color:darkgray;
+    color: white;
+}
