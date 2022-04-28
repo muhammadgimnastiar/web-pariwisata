@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+  var init = [{'title': 'Jarwo', 'rating': '5.5'}]
+  localStorage.setItem('movies', JSON.stringify(init))
+
   var tableArray = JSON.parse(localStorage.getItem('movies'))
 
   function saveDataToLocal(data){
