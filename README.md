@@ -10,8 +10,8 @@ HTML, CSS, Javasript, Bootstrap5
 #### Fitur
 Fitur utama halaman home, profile, dal lain-lain
 <p style="float: left;">
-  <img src="https://github.com/muhammadgimnastiar/web-pariwisata-bootstrap5/blob/master/assets/screenshoot/home.png" width="100%" />
-  <img src="https://github.com/muhammadgimnastiar/web-pariwisata-bootstrap5/blob/master/assets/screenshoot/content.png" width="100%" />
+  <img src="https://github.com/muhammadgimnastiar/web-pariwisata/blob/main/assets/screenshoot/home.png" width="100%" />
+  <img src="https://github.com/muhammadgimnastiar/web-pariwisata/blob/main/assets/screenshoot/home.png" width="100%" />
   
 </p>
 
