@@ -151,6 +151,11 @@ section .title {
     margin: 2em 0;
 }
 
+.padd-20{
+    padding: 20px;
+    margin: 40;
+}
+
 .card{
     margin: auto;
     max-width: 1000px;
