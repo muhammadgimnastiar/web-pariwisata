@@ -185,81 +185,86 @@ function cek_input($data) {
 
 ?>
 
-<div class="content padd-20">
+      <div class="content padd-20">
+        <h3>Isi Data Diri Traveler</h3>
         <form method="post" action="<?php echo ($error_count <= 0 ? "form-result.php" : "");?>">
 
-            <div class="form-group row">
+            
                 <label for="nama">Nama</label>
-                <div class="col-sm-10">
+                <div>
                     <input type="text" name="nama"
-                        class="form-control <?php echo ($error_nama !="" ? "is-invalid" : ""); ?>" id="nama"
+                        class=" <?php echo ($error_nama !="" ? "is-invalid" : ""); ?>" id="nama"
                         placeholder="Nama" value="<?php echo $nama; ?>"><span
                         class="warning"><?php echo $error_nama; ?></span>
                 </div>
-            </div>
+            
 
-            <div class="form-group row">
+            
                 <label for="nim">NIM: </label>
                 <div class="col-sm-10">
                     <input type="text" name="nim"
-                        class="form-control <?php echo ($error_nim !="" ? "is-invalid" : ""); ?>" id="nim"
+                        class=" <?php echo ($error_nim !="" ? "is-invalid" : ""); ?>" id="nim"
                         placeholder="NIM" value="<?php echo $nim; ?>"><span
                         class="warning"><?php echo $error_nim; ?></span>
                 </div>
-            </div>
+            
 
-            <div class="form-group row">
-                <label for="email" class="col-sm-2col-form-label">E-mail</label>
-                <div class="col-sm-10">
+            
+                <label for="email" >E-mail</label>
+                <div >
                     <input type="text" name="email"
-                        class="form-control <?php echo($error_email !="" ? "is-invalid" : ""); ?>" id="email"
+                        class=" <?php echo($error_email !="" ? "is-invalid" : ""); ?>" id="email"
                         placeholder="email" value="<?php echo $email; ?>"><span
                         class="warning"><?php echo $error_email; ?></span>
                 </div>
-            </div>
+           
 
-            <div class="form-group row">
-                <label for="tanggal" class="col-sm-2 col-form-label">Tanggal Lahir</label>
-                <div class="col-sm-10">
+       
+                <label for="tanggal">Tanggal Lahir</label>
+                <div>
                     <input type="date" name="tanggal"
-                        class="form-control  <?php echo($error_tanggal !="" ? "is-invalid" : ""); ?>" id="tanggal"
+                        class="  <?php echo($error_tanggal !="" ? "is-invalid" : ""); ?>" id="tanggal"
                         placeholder="Tanggal Lahir" value="<?php echo $tanggal; ?>"><span
                         class="warning"><?php echo $error_tanggal; ?></span>
                 </div>
-            </div>
+          
 
-            <div class="form-group row">
+          <div>
                 <label>Jenis kelamin:</label>
                 <br>  
                 <label><input type="radio" name="jenis" value="laki-laki" <?php echo $male_checked; ?>/>Laki-laki</label>  
                 <label><input type="radio" name="jenis" value="perempuan" <?php echo $female_checked; ?> />Perempuan</label>
                 <span class="warning"><?php echo $error_jenis; ?></span>
-            </div>
+                </div>
+
+                
+
+                
 
 
 
-            <div class="form-group row">
+            <div>
                 <label>Hobby:</label>
                 <br>
-                <label><input type="radio" name="hobby" value="Hobby 1" <?php echo $hobby1_checked; ?> /> Hobby1</label>
-                <label><input type="radio" name="hobby" value="Hobby 2" <?php echo $hobby2_checked; ?> /> Hobby2</label>
-                <label><input type="radio" name="hobby" value="Hobby 3" <?php echo $hobby3_checked; ?> /> Hobby3</label>
+                <label><input type="checkbox" name="hobby" value="Hobby 1" <?php echo $hobby1_checked; ?> /> Hobby1</label>
+                <label><input type="checkbox" name="hobby" value="Hobby 2" <?php echo $hobby2_checked; ?> /> Hobby2</label>
+                <label><input type="checkbox" name="hobby" value="Hobby 3" <?php echo $hobby3_checked; ?> /> Hobby3</label>
                 <span class="warning"><?php echo $error_hobby; ?></span>
-            </div>
+                </div>
 
-            <div class="form-group row ">
-                <label for="pesan" class="col-sm-2 col-form-label">Pesan</label>
+           
+                <label for="pesan">Pesan</label>
                 <div class="col-sm-10">
                     <textarea name="pesan" class="form-control <?php echo($error_pesan !="" ? "is-invalid" : ""); ?>"><?php echo $pesan; ?></textarea><span class="warning"><?php echo $error_pesan; ?></span>
                 </div>
-            </div>
+           
 
 
-            <div class="form-group row">
-                <div class="col-sm-10">
+           
+                <div>
                     <button type="submit" class="btn btn-primary" > Submit</button>
                 </div>
-            </div>
+            <
         </form>
         </div>
 

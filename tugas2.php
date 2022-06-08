@@ -19,12 +19,12 @@
     class PesanTiketWisata extends Pemesanan{
         
 
-        public function pesanTiket($harga){   
-            echo "Kamu Berhasil memesan tiket, ". $harga. "<br>";
+        public function pesanTiket($tujuan){   
+            echo "Kamu Berhasil memesan tiket, ". $tujuan. "<br>";
         }
 
-        public function cetakTiket($harga){
-            echo "Tiket Berhasil Dicetak. Total Pembayaran : ". $harga. "<br>";
+        public function cetakTiket($tujuan){
+            echo "Tiket Berhasil Dicetak. : ". $tujuan. "<br>";
         }
     }
 
@@ -53,12 +53,12 @@
     }
 
 
-    $GimnasMauKeBatu = new Beli2();
-    $GimnasMauKeBatu->pesanTiket(20000);
-    $GimnasMauKeBatu->cetakTiket(20000);
+    // $GimnasMauKeBatu = new Beli2();
+    // $GimnasMauKeBatu->pesanTiket(20000);
+    // $GimnasMauKeBatu->cetakTiket(20000);
 
-    $GimnasMauKeBatu = new BeliDua();
-    $GimnasMauKeBatu->pesanTiket(20000);
-    $GimnasMauKeBatu->cetakTiket(20000);
+    // $GimnasMauKeBatu = new BeliDua();
+    // $GimnasMauKeBatu->pesanTiket(20000);
+    // $GimnasMauKeBatu->cetakTiket(20000);
 
 ?>
